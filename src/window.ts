@@ -26,6 +26,14 @@ export const init = (props: BotProps) => {
   elementUsed = element;
 };
 
+export const initSearch = (props: BotProps) => {
+  destroy();
+  const element = document.createElement('flowise-searchbot');
+  Object.assign(element, props);
+  document.body.appendChild(element);
+  elementUsed = element;
+};
+
 export const destroy = () => {
   elementUsed?.remove();
 };
@@ -33,6 +41,7 @@ export const destroy = () => {
 type Chatbot = {
   initFull: typeof initFull;
   init: typeof init;
+  initSearch: typeof initSearch;
   destroy: typeof destroy;
 };
 
@@ -45,6 +54,7 @@ declare const window:
 export const parseChatbot = () => ({
   initFull,
   init,
+  initSearch,
   destroy
 });
 
