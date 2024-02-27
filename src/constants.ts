@@ -1,5 +1,5 @@
 import type { BubbleProps } from './features/bubble';
-import {SearchProps} from "@/features/search";
+import { SearchProps } from '@/features/search';
 
 export const defaultBotProps: BubbleProps = {
   chatflowid: '',

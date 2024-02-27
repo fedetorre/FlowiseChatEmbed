@@ -1,8 +1,8 @@
 import { customElement } from 'solid-element';
-import {defaultBotProps, defaultSearchBotProps} from './constants';
+import { defaultBotProps, defaultSearchBotProps } from './constants';
 import { Bubble } from './features/bubble';
 import { Full } from './features/full';
-import {Search} from "./features/search";
+import { Search } from './features/search';
 
 export const registerWebComponents = () => {
   if (typeof window === 'undefined') return;
